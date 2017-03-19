@@ -83,7 +83,7 @@
 
 * name：当前目录的名字
 * version：永远是`1.0.0`
-* description：从当前目录的`readme`文件中提取，如果没有会是一个空字符串""
+* description：从当前目录的`readme`文件中提取，如果没有会是一个空字符串`""`
 * main：永远是`index.js`
 * scripts：默认创建一个空的`test`脚本命令
 * keywords：空
