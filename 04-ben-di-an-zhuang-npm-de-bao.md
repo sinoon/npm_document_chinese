@@ -18,7 +18,5 @@ npm install <包名>
 
 ### 测试安装
 
-为了确认`npm install`是否运行成功，确认`node_modules`目录存在，并且目录下包含了你下载的包的名字。你可以通过`ls node_modules`的方式来确认（在Unix系统上），比如，`OSX`，`Debian`，或者\`node
-
-
+为了确认`npm install`是否运行成功，确认`node_modules`目录存在，并且目录下包含了你下载的包的名字。你可以通过`ls node_modules`的方式来确认（在Unix系统上），比如，`OSX`，`Debian`，或者\`dir node\
 
