@@ -102,7 +102,22 @@
 
 ### 提示：
 
+如果在package.json中没有`description`这一属性，`npm`会使用`README.md`或者`README`的第一行来替代。`description`帮助人们在`npm`中搜索到你的包，所以一个自定义的`description`是非常有用的，它可以让你的包更容易被找到。
 
+## 自定义init过程
+
+同样可以完全自定义创建的信息以及在创建过程中的问题。通过创建一个`.npm-init.js`来完成。默认设置是，`npm`会检查你的`home`目录下有没有这个文件，像这样`~/.npm-init.js`
+
+一个简单的`.npm-init.js`文件看起来是这个样子的：
+
+```js
+module.exports = {
+    customField: 'Custom Field',
+    otherCustomField: 'This field is really cool'
+}
+```
+
+在设置好这个文件只有，运行`npm init`，
 
 
 
