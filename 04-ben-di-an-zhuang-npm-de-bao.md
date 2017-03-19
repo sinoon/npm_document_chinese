@@ -18,11 +18,11 @@ npm install <包名>
 
 ### 测试安装
 
-为了确认npm install是否运行成功，确认nodemodules目录存在，并且目录下包含了你下载的包的名字。你可以通过ls nodemodules的方式来确认（在Unix系统上），比如，OSX，Debian，或者在windows上运行dir node\_modules。
+为了确认`npm install`是否运行成功，确认`node_modules`目录存在，并且目录下包含了你下载的包的名字。你可以通过`ls node_modules`的方式来确认（在`Unix`系统上），比如，`OSX`，`Debian`，或者在`windows`上运行`dir node_modules`。
 
 ### 举例
 
-安装一个叫lodash的包。通过列出node\_modeles里面所有的文件夹看是不是有叫loadsh的，来判断是否安装成功。
+安装一个叫`lodash`的包。通过列出`node_modeles`里面所有的文件夹看是不是有叫`loadsh`的，来判断是否安装成功。
 
 > npm install lodash  
 > ls node\_modules        \# 在Windows系统上使用 `dir`
@@ -39,7 +39,7 @@ npm install <包名>
 
 ## 使用被安装的包
 
-一旦一个包被安装在了node\_modules中，你就可以在你的代码中使用它了。举例来说，如果你正在开发一个Node.js模块，你可以require它。
+一旦一个包被安装在了`node_modules`中，你就可以在你的代码中使用它了。举例来说，如果你正在开发一个`Node.js`模块，你可以`require`它。
 
 ### 举例：
 
@@ -60,11 +60,9 @@ console.log(output);
 ```
 module.js:340
     throw err;
-    
+
 Error: Cannot find module 'lodash'
 ```
 
 要修复它的话，运行`npm install lodash`在`index.js`的同级目录下。
-
-
 
