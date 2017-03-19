@@ -24,10 +24,12 @@ npm install <包名>
 
 安装一个叫lodash的包。通过列出node\_modeles里面所有的文件夹看是不是有叫loadsh的，来判断是否安装成功。
 
-    > npm install lodash
-    > ls node_modules        # 在Windows系统上使用 `dir` 
+> npm install lodash  
+> ls node\_modules        \# 在Windows系统上使用 `dir`
 
-    #=> lodash
+```
+#=> lodash
+```
 
 ## 什么版本的包被安装了呢？
 
@@ -37,7 +39,32 @@ npm install <包名>
 
 ## 使用被安装的包
 
-一旦一个包被安装在了node\_modules中，你就可以在你的代码中使用它了。举例来说，如果你正在开发一个Node.js模块，你可以
+一旦一个包被安装在了node\_modules中，你就可以在你的代码中使用它了。举例来说，如果你正在开发一个Node.js模块，你可以require它。
+
+### 举例：
+
+创建一个叫`index.js`的文件，里面有如下代码：
+
+```javascript
+// index.js
+var lodash = require('lodash');
+
+var output = lodash.without([1,2,3], 1);
+console.log(output);
+```
+
+使用`node index.js`来运行这段代码，它将输出`[2, 3]`。
+
+如果你没有正确的安装`lodash`，那么你将会收到以下错误：
+
+```
+module.js:340
+    throw err;
+    
+Error: Cannot find module 'lodash'
+```
+
+要修复它的话，运行`npm install lodash`在`index.js`的同级目录下。
 
 
 
