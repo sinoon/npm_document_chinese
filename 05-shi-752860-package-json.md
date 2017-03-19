@@ -102,7 +102,7 @@
 
 ### 提示：
 
-如果在package.json中没有`description`这一属性，`npm`会使用`README.md`或者`README`的第一行来替代。`description`帮助人们在`npm`中搜索到你的包，所以一个自定义的`description`是非常有用的，它可以让你的包更容易被找到。
+如果在`package.json`中没有`description`这一属性（译者注：指在发布时），`npm`会使用`README.md`或者`README`的第一行来替代。`description`帮助人们在`npm`中搜索到你的包，所以一个自定义的`description`是非常有用的，它可以让你的包更容易被找到。
 
 ## 自定义init过程
 
