@@ -23,7 +23,7 @@ npm config get prefix
 
 > 警告：如果反馈的结果仅仅是`/usr`，**采用第二种方式，**或者你弄乱了你的权限
 
-2. 修改`npm`文件夹的当前所有人到当前用户（即你的用户名）：
+1. 修改`npm`文件夹的当前所有人到当前用户（即你的用户名）：
 
 ```
 sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
@@ -31,7 +31,31 @@ sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
 
 这将会修改`npm`使用的子目录以及一些其他工具（`lib/node_modules`，`bin`，和`share`）。
 
-## 选择2：修改
+## 选择2：修改npm的默认文件夹到其他目录
+
+如果你不修改默认文件夹的所有权的话（比如：`/usr`），在你其后的操作中，会造成一些问题，比如当你想与其他人共享系统的时候。
+
+反而，你可以完全修改`npm`默认文件夹的配置到另外一个目录。在我们下面的介绍中，将会是一个在`home`目录下的隐藏文件夹。
+
+1. 新建一个文件夹存放全局安装的文件
+
+```
+mkdir ~/.npm-global
+```
+
+2. 配置`npm`来使用新的文件夹
+
+```
+npm config set prefix '~/.npm-global'
+```
+
+3. 打开（没有就创建）一个`~/.profile`文件，在里面增加一行
+
+```
+export PATH=~/.npm-global/bin:$PATH
+```
+
+4. 
 
 
 
