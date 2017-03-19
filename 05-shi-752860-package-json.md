@@ -49,7 +49,60 @@
 > npm init --yes
 ```
 
-这将不会询问你任何问题，
+这将不会询问你任何问题，而是会从当前目录信息中抓取一些，产生一个默认的`package.json`。
+
+```
+> npm init -yes
+```
+
+写入到`/home/ag_dubs/my_package/package.json`的内容会是以下样子：
+
+```json
+{
+  "name": "my_package",
+  "description": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ashleygwilliams/my_package.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashleygwilliams/my_package/issues"
+  },
+  "homepage": "https://github.com/ashleygwilliams/my_package"
+}
+```
+
+* name：当前目录的名字
+* version：永远是`1.0.0`
+* description：从当前目录的`readme`文件中提取，如果没有会是一个空字符串""
+* main：永远是`index.js`
+* scripts：默认创建一个空的`test`脚本命令
+* keywords：空
+* author：空
+* license：[ISC](https://opensource.org/licenses/ISC)
+* bugs：信息提取自当前目录，如果存在
+* homepage：信息提取自当前目录，如果存在
+
+你同样也可以给`init`命令设置一些配置选项，几个比较有用：
+
+```
+> npm set init.author.email "sinoon1218@gmail.com"
+> npm set init.author.name "sinoon"
+> npm set init.license "MIT"
+```
+
+### 提示：
+
+
 
 
 
