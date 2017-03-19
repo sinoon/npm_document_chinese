@@ -23,7 +23,15 @@ npm config get prefix
 
 > 警告：如果反馈的结果仅仅是`/usr`，**采用第二种方式，**或者你弄乱了你的权限
 
-2. 
+2. 修改`npm`文件夹的当前所有人到当前用户（即你的用户名）：
+
+```
+sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+```
+
+这将会修改`npm`使用的子目录以及一些其他工具（`lib/node_modules`，`bin`，和`share`）。
+
+## 选择2：修改
 
 
 
