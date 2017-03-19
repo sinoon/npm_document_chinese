@@ -55,7 +55,7 @@
 > npm init -yes
 ```
 
-写入到`/home/ag_dubs/my_package/package.json`的内容会是以下样子：
+写入到`/home/ag_dubs/my_package/package.json`（译者注：注意这个目录结构）的内容会是以下样子：
 
 ```json
 {
