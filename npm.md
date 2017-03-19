@@ -37,25 +37,55 @@ sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
 
 反而，你可以完全修改`npm`默认文件夹的配置到另外一个目录。在我们下面的介绍中，将会是一个在`home`目录下的隐藏文件夹。
 
-1. 新建一个文件夹存放全局安装的文件
+1.新建一个文件夹存放全局安装的文件
 
 ```
 mkdir ~/.npm-global
 ```
 
-2. 配置`npm`来使用新的文件夹
+2.配置`npm`来使用新的文件夹
 
 ```
 npm config set prefix '~/.npm-global'
 ```
 
-3. 打开（没有就创建）一个`~/.profile`文件，在里面增加一行
+3.打开（没有就创建）一个`~/.profile`文件，在里面增加一行
 
 ```
 export PATH=~/.npm-global/bin:$PATH
 ```
 
-4. 
+4.保存并回到命令行，执行：
+
+```
+source ~/.profile
+```
+
+测试是否生效：
+
+不使用`sudo`命令，全局安装一个包：
+
+```
+npm install -g jshint
+```
+
+对于第二步到第四步，你也可以相应的`ENV`对象（比如，你不想修改`/.profile`）：
+
+```
+NPM_CONFIG_PREFIX=~/.npm-global
+```
+
+## 选择3：使用安装工具来帮你搞定
+
+如果你是刚刚安装了node在Mac OS，你可以通过使用[`Hombrew`](http://brew.sh/)来避免这个问题。`HomeBrew`会帮你用正确的权限设置好一系列的东西。
+
+```
+brew install node
+```
+
+译者注：其实用`homebrew`安装也是挺坑的，因为`node`的源在`homebrew`就有好几个，还是建议使用`*unix`系统的朋友，下载对应的编译好的包之后，拷贝到对应的目录下，有权限问题就解决权限问题。关于`node`的版本控制也比较容易，可以选择`nvm`或者`n`，后者是`TJ`大神开发的，前者的缺点是每个`node`版本使用独立的`node_modules`，也就是在A版本安装的全局模块，在B版本下是没有的，还得再安装一下，`n`就没有这个问题。
+
+
 
 
 
