@@ -18,5 +18,26 @@ npm install <包名>
 
 ### 测试安装
 
-为了确认`npm install`是否运行成功，确认`node_modules`目录存在，并且目录下包含了你下载的包的名字。你可以通过`ls node_modules`的方式来确认（在Unix系统上），比如，`OSX`，`Debian`，或者\`dir node\
+为了确认npm install是否运行成功，确认nodemodules目录存在，并且目录下包含了你下载的包的名字。你可以通过ls nodemodules的方式来确认（在Unix系统上），比如，OSX，Debian，或者在windows上运行dir node\_modules。
+
+### 举例
+
+安装一个叫lodash的包。通过列出node\_modeles里面所有的文件夹看是不是有叫loadsh的，来判断是否安装成功。
+
+    > npm install lodash
+    > ls node_modules        # 在Windows系统上使用 `dir` 
+
+    #=> lodash
+
+## 什么版本的包被安装了呢？
+
+如果没有存在`package.json`文件在当前目录下，最新的版本会被安装。
+
+如果存在`package.json`文件，那么在`package.json`中按照[语义化规则](https://docs.npmjs.com/getting-started/semantic-versioning)的最新版本会被安装。
+
+## 使用被安装的包
+
+一旦一个包被安装在了node\_modules中，你就可以在你的代码中使用它了。举例来说，如果你正在开发一个Node.js模块，你可以
+
+
 
