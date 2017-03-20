@@ -117,5 +117,36 @@ module.exports = {
 }
 ```
 
-在设置好这个文件之后，运行`npm init`，
+在设置好这个文件之后，运行`npm init`，会产生一个下面内容的package.json文件：
+
+```json
+{
+  customField: 'Custom Field',
+  otherCustomField: 'This field is really cool'
+}
+```
+
+同样，你也可以自定义问题，通过prompt函数：
+
+```js
+modele.exports = prompt("你最喜欢的av女友是谁？","我喜欢苍老师");
+```
+
+了解更多进一步自定义的方法，请看这里**占位符**。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
