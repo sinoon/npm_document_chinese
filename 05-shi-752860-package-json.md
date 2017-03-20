@@ -162,6 +162,28 @@ modele.exports = prompt("你最喜欢的av女友是谁？","我喜欢苍老师")
 }
 ```
 
+### --save 和 --save-dev install标示
+
+更简单（也更流弊）的一个增加依赖到`package.json` 的方式是通过命令行来操作的时候，在`npm install`后面增加`--save`或者`--save-dev`，选择哪个取决于你希望它是哪种依赖了。
+
+在`package.json`中的`dependencies`增加一条依赖：
+
+`npm install <package_name> --save`
+
+在`devDependencies`增加哦一条依赖：
+
+`npm install  <package_name> --save-dev`
+
+### 管理版本依赖
+
+就像我们经常说的那样，`npm`使用语义化版本或者叫`SemVer`，来进行版本管理和版本的范围限制。
+
+如果你有一个package.json在目录下，你可以运行npm install，之后，`npm`会依据在`package.json`文件中列出的依赖，依据semver rules（语义化规则）来下载最新的版本。
+
+学习关于更多语义化版本的内容，请看我们的**跳转**
+
+
+
 
 
 
