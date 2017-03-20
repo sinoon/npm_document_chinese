@@ -117,5 +117,5 @@ module.exports = {
 }
 ```
 
-在设置好这个文件只有，运行`npm init`，
+在设置好这个文件之后，运行`npm init`，
 
