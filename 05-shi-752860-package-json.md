@@ -134,9 +134,33 @@ modele.exports = prompt("你最喜欢的av女友是谁？","我喜欢苍老师")
 
 了解更多进一步自定义的方法，请看这里**占位符**。
 
+## 指定依赖的包
+
+为了指定你项目中依赖的包，你需要在package.json中列出你需要的那些包。这里有两种类型的包你可以列出：
+
+* "dependencies"：列在这里的包，是用来在生产环境中依赖的。
+* "devDependencies"：列在这里的包，仅仅为了开发和测试中需要用到。
+
 ## 手动编辑你的package.json
 
+你可以手动编辑你的package.json文件。你需要创建一个叫做`dependencise`属性，它是一个对象（译者注：指`json`中的一种数据类型）。这个对象用来保存你将要用到的包，这里需要指出的是，它是通过[`semver`](https://docs.npmjs.com/getting-started/semantic-versioning)\(语义化版本\)表达式来指定符合你项目依赖的模块版本的。
 
+如果你需要依赖的包，只是在开发或者测试的时候才会用到，那么你可以用上面的方式来指定依赖以及版本，唯一不同的是，存在一个叫`devDependencies`属性中。
+
+举个栗子：下面的项目用到了一个主版本号为1，并且名字叫mydep的包，在生产环境使用，然后在开发环境依赖了一个主版本号为3，名字叫`mytext_framework`的包：
+
+```json
+{
+  "name": "my_package",
+  "version": "1.0.0",
+  "dependencies": {
+    "my_dep": "^1.0.0"
+  },
+  "devDependencies" : {
+    "my_test_framework": "^3.1.0"
+  }
+}
+```
 
 
 
